@@ -18,18 +18,10 @@ public class ProductsPage {
     @FindBy(className = "shopping_cart_container")
     WebElement cartIcon;
 
-    @FindBy(css = ".modal-close-button")
-    WebElement closeModalButton;
-
 
     public ProductsPage(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
-    }
-    public void closePasswordChangePopup(){
-        if (closeModalButton.isDisplayed()){
-            closeModalButton.click();
-        }
     }
 
     public void addToCart(){
